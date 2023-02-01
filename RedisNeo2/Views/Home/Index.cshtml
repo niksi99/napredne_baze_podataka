@@ -1,0 +1,32 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Imas li nalog?</h1>
+    <p>Ukoliko imas <a href="/Login/LoginPage"> loginuj se </a></p>
+    <label for="lab1">Ukoliko nemas</label>
+    <p id = "lab1"> 
+         <select name="Register">
+            <option disabled selected>Registruj se kao:</option>
+             <option> <a href="/Korisnik/AddKorisnikPage">Korisnik</a></option> 
+            <option><a href="AddNGOPage">NGO</a></option>
+        </select>
+    </p>
+
+   @*<div class="NavMenuCssClass" Onclick="ToggleNavMenu">
+        <NavLink class="nav-link" href="chatccc">
+            <span class="oi oi-list-rich" aria-hidden="true"></span> Chatccc
+        </NavLink>
+   </div>*@
+   <a href="/Chat/ChatPage">ChatPage</a>
+   
+   
+
+    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+</div>
+
+
+
+<script src="~/js/signalr/dist/browser/signalr.js"></script>
+<script src="~/js/c~/js/chat.js"></script>
