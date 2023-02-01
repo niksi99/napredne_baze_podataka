@@ -116,7 +116,7 @@ app.MapHub<ChatHub>("/chathub");
 using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
 var chatHub = serviceScope.ServiceProvider.GetService<IHubContext<ChatHub>>();
 var redisChannel = redisClient.GetSubscriber().Subscribe("MESSAGES");
-
+    
 redisChannel.OnMessage(async (message) =>
 {
     try

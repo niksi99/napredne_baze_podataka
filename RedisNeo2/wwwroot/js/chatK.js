@@ -10,23 +10,12 @@ connection.on("NBP_Chat", function (user, message) {
     // is not interpreted as markup. If you're assigning in any other way, you 
     // should be aware of possible script injection concerns.
     li.textContent = `${user} says ${message}`;
-       connection.invoke("GetMessage1").then(function () {
-        var li = document.createElement("li");
-        document.getElementById("messagesList").appendChild(li);
-        // We can assign user-supplied strings to an element's textContent because it
-        // is not interpreted as markup. If you're assigning in any other way, you 
-        // should be aware of possible script injection concerns.
-        li.textContent = `${user} says ${message}`;
-    }).catch(function (err) {
-        return console.error(err.toString());
-    });
-
 });
 
 connection.start().then(function () {
 
     connection.invoke("re").then(function (u) {
-        document.getElementById("userNPB").innerText = u;
+        document.getElementById("userNPBk").innerText = u;
     });
 
     document.getElementById("sendButtonKorisnik").disabled = false;
@@ -45,7 +34,7 @@ connection.start().then(function () {
 //});
 
 document.getElementById("sendButtonKorisnik").addEventListener("click", function (event) {
-    var user = document.getElementById("userNPB").innerText;
+    var user = document.getElementById("userNPBk").innerText;
     //var user = document.getElementById("korisnik_user").innerHTML;
     var message = document.getElementById("messageInput").value;
     connection.invoke("SendMessage", user, message).catch(function (err) {
