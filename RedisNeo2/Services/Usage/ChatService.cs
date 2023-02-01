@@ -26,6 +26,14 @@ namespace RedisNeo2.Services.Usage
 
             var roomKey = "room:1";
 
+            Message m = new Message();
+
+            m.Id = messageId;
+            m.UserName = user;
+            m.VremeSlanja = DateTime.Now;
+            m.MessageText = message;
+
+            
             //var jsonMessage = JsonSerializer.Serialize<Message>(message);
             var A = new { 
                 messageId,
@@ -33,8 +41,8 @@ namespace RedisNeo2.Services.Usage
                 user,
                 message
             };
-            await _redisDb.SortedSetAddAsync(roomKey, JsonSerializer.Serialize(A), DateTime.Now.ToOADate());
-            await PublishMessage(message);
+            await _redisDb.SortedSetAddAsync(roomKey, JsonSerializer.Serialize<Message>(m), DateTime.Now.ToOADate());
+            await PublishMessage(m);
         }
 
         public string  GetMessage() {
@@ -56,12 +64,12 @@ namespace RedisNeo2.Services.Usage
         //    await PublishMessage(pubSubMessage.ToString();
         //}
 
-        private async Task PublishMessage(string pubSubMessage)
+        private async Task PublishMessage(Message pubSubMessage)
         {
-            await _redisDb.PublishAsync("MESSAGES", pubSubMessage);
+            await _redisDb.PublishAsync("MESSAGES", JsonSerializer.Serialize<Message>(pubSubMessage));
         }
 
-        private async Task SubsMessage(string pubSubMessage)
+        private async Task SubsMessage(Message pubSubMessage)
         {
            //await _redisD ("MESSAGES", pubSubMessage);
         }
