@@ -32,7 +32,7 @@ namespace RedisNeo2.Hubs
         }
 
         public async Task GetMessage() {
-            //await _chatService.GetMessage();    
+            await _chatService.GetMessage();    
         }
 
         public async Task SendMessage1(string user, string message) {

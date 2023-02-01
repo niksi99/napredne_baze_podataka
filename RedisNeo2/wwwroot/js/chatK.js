@@ -21,7 +21,9 @@ connection.start().then(function () {
     document.getElementById("sendButtonKorisnik").disabled = false;
 
     connection.invoke("GetMessage").then(function (messages) {
-
+        var li = document.createElement("li");
+        document.getElementById("messagesList").appendChild(li);
+        li.textContent = "test";
     }).catch(function (err) {
         return console.error(err.toString());
     });
