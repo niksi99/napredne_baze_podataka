@@ -19,6 +19,13 @@ connection.start().then(function () {
     });
 
     document.getElementById("sendButtonKorisnik").disabled = false;
+
+    connection.invoke("GetMessage").then(function (messages) {
+
+    }).catch(function (err) {
+        return console.error(err.toString());
+    });
+
 }).catch(function (err) {
     return console.error(err.toString());
 });

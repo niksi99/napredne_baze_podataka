@@ -46,7 +46,8 @@ namespace RedisNeo2.Services.Usage
         }
 
         public string  GetMessage() {
-            var sortedSetData = _redisDb.SortedSetScan("Room:1");
+            var sortedSetData = _redisDb.SortedSetScan("room:1");
+            
             var vrati = (string.Join("\n", sortedSetData));
 
             return vrati;

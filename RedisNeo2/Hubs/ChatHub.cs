@@ -31,7 +31,7 @@ namespace RedisNeo2.Hubs
             }
         }
 
-        public async Task GetMessage1() {
+        public async Task GetMessage() {
             //await _chatService.GetMessage();    
         }
 
