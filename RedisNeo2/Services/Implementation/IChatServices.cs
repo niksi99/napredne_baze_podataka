@@ -6,5 +6,7 @@ namespace RedisNeo2.Services.Implementation
     {
         public Task SendMessage(string user, string message);
         public Task GetMessage();
+
+        public IEnumerable<Message> GetAll();
     }
 }
