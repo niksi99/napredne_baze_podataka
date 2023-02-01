@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "nY2gQsqmfnMzC/8LmkWgvhzlcpVwz/38Atg/kYPh72jKA62ZVOIuc7vHZPpSZxAlGQGcU1qzS9OX7vnYTtEEMw==",
+  "dgSpecHash": "v2vdmBjE1l2/V2dhpb77QEB1347AmXpbh/isS/UI+iNwohxCGUyPjPV61SHqVcAOKz8/Af0vmjcNBOAynw1WeA==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Nixy\\Desktop\\Licno\\DOTNET\\RedisNeo\\RedisNeo2_sol\\RedisNeo2\\RedisNeo2.csproj",
+  "projectFilePath": "C:\\Users\\Nixy\\Desktop\\RedisProjekat\\RedisNeo2\\RedisNeo2.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Nixy\\.nuget\\packages\\humanizer.core\\2.2.0\\humanizer.core.2.2.0.nupkg.sha512",
     "C:\\Users\\Nixy\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",

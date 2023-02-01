@@ -119,18 +119,18 @@ var redisChannel = redisClient.GetSubscriber().Subscribe("MESSAGES");
 
 redisChannel.OnMessage(async (message) =>
 {
-    try
-    {
-        var mess = JsonSerializer.Deserialize<PubSub>(message.Message.ToString());
-        if (mess != null && chatHub != null)
-        {
-            await chatHub.Clients.All.SendAsync("NBP_Chat", mess.Type, mess.Data);
-        }
-    }
-    catch (Exception e)
-    {
-        Console.WriteLine($"Error: {e} ");
-    }
+    //try
+    //{
+        //var mess = JsonSerializer.Deserialize<PubSub>(message.Message.ToString());
+        //if (mess != null && chatHub != null)
+        //{
+            await chatHub.Clients.All.SendAsync("NBP_Chat", "user", message);
+    //    }
+    //}
+    //catch (Exception e)
+    //{
+    //    Console.WriteLine($"Error: {e} ");
+    //}
 });
 
 app.UseEndpoints(e => {
