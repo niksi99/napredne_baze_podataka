@@ -24,7 +24,7 @@ namespace RedisNeo2.Controllers
         {
 
             var claims = new List<Claim> {
-                    new Claim(ClaimTypes.Name, username),
+                    new Claim(ClaimTypes.Email, username),
                     new Claim(ClaimTypes.Role, "Korisnik")
                 };
 
@@ -78,5 +78,7 @@ namespace RedisNeo2.Controllers
             await HttpContext.SignOutAsync(CookieAuthenticationDefaults.AuthenticationScheme);
             return RedirectToAction("AddKorisnikPage");
         }
+
+        
     }
 }

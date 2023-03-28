@@ -4,54 +4,40 @@
 document.getElementById("sendButtonKorisnik").disabled = true;
 
 connection.on("NBP_Chat", function (user, message) {
+
+    connection.invoke("rek").then(function (user) {
+        var u = document.getElementById("userKorisnik").innerHTML = user;
+    });
+
     var li = document.createElement("li");
     document.getElementById("messagesList").appendChild(li);
-    // We can assign user-supplied strings to an element's textContent because it
-    // is not interpreted as markup. If you're assigning in any other way, you 
-    // should be aware of possible script injection concerns.
+
     li.textContent = `${user} says ${message}`;
 });
 
 connection.start().then(function () {
 
-    connection.invoke("re").then(function (u) {
-        document.getElementById("userNPBk").innerText = u;
+    connection.invoke("rek").then(function (u) {
+        document.getElementById("userKorisnik").innerHTML = u;
     });
 
     document.getElementById("sendButtonKorisnik").disabled = false;
-
-    connection.invoke("GetMessage").then(function (messages) {
-        for (var message in messages) {
-            var li = document.createElement("li");
-            document.getElementById("messagesList").appendChild(li);
-            li.textContent = `${message.user} says ${message.message}`;
-        }
-        
-    }).catch(function (err) {
-        return console.error(err.toString());
-    });
-
 }).catch(function (err) {
     return console.error(err.toString());
 });
 
-//document.getElementById("sendButton").addEventListener("click", function (event) {
-//    var user = document.getElementById("ngo_user").value;
-//    var message = document.getElementById("messageInput").value;
-//    const messageString = JSON.stringify(message);
-//    connection.invoke("SendMessage", user, messageString).catch(function (err) {
-//        return console.error(err.toString());
-//    });
-//    event.preventDefault();
-//});
 
 document.getElementById("sendButtonKorisnik").addEventListener("click", function (event) {
-    var user = document.getElementById("userNPBk").innerText;
-    //var user = document.getElementById("korisnik_user").innerHTML;
+    var user = document.getElementById("userKorisnik").innerHTML;
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessage", user, message).catch(function (err) {
+    connection.invoke("SendMessageNovo", user, message).catch(function (err) {
+        return console.error(err.toString());
+    });
+    connection.invoke("Pub", user, message).catch(function (err) {
+        return console.error(err.toString());
+    });
+    connection.invoke("Sub").catch(function (err) {
         return console.error(err.toString());
     });
     event.preventDefault();
 });
-

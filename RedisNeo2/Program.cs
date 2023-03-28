@@ -30,7 +30,7 @@ builder.Services.AddStackExchangeRedisCache(options => {
     options.InstanceName = "RedisNeo2_";
 });
 
-var clientNeo4j = new BoltGraphClient(new Uri("bolt://localhost:7687"), "neo4j", "redisneo2");
+var clientNeo4j = new BoltGraphClient(new Uri("bolt://localhost:7687"), "neo4j", "niksi1999");
 clientNeo4j.ConnectAsync();
 //var clientNeo4j2 = new GraphClient(new Uri("bolt://localhost:7687"), "neo4j", "redisneo2");
 //clientNeo4j2.ConnectAsync();
@@ -111,27 +111,27 @@ app.MapRazorPages();
 
 app.MapBlazorHub();
 
-app.MapHub<ChatHub>("/chathub");
+app.MapHub<ChatHub>("/chatHub");
 
-using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
-var chatHub = serviceScope.ServiceProvider.GetService<IHubContext<ChatHub>>();
-var redisChannel = redisClient.GetSubscriber().Subscribe("MESSAGES");
-    
-redisChannel.OnMessage(async (message) =>
-{
-    try
-    {
-        var mess = JsonSerializer.Deserialize<Message>(message.Message.ToString());
-        if (mess != null && chatHub != null)
-        {
-            await chatHub.Clients.All.SendAsync("NBP_Chat", mess.UserName, mess.MessageText);
-}
-    }
-    catch (Exception e)
-{
-    Console.WriteLine($"Error: {e} ");
-}
-});
+//using var serviceScope = app.Services.GetRequiredService<IServiceScopeFactory>().CreateScope();
+//var chatHub = serviceScope.ServiceProvider.GetService<IHubContext<ChatHub>>();
+//var redisChannel = redisClient.GetSubscriber().Subscribe("MESSAGES");
+
+//redisChannel.OnMessage(async (message) =>
+//{
+//    try
+//    {
+//        //var mess = JsonSerializer.Deserialize<PubSub>(message.Message.ToString());
+//        //if (mess != null && chatHub != null)
+//        //{
+//            await chatHub.Clients.All.SendAsync("NBP_Chat", "User", message);
+//        //}
+//    }
+//    catch (Exception e)
+//    {
+//        Console.WriteLine($"Error: {e} ");
+//    }
+//});
 
 app.UseEndpoints(e => {
     e.MapControllerRoute(
@@ -140,7 +140,7 @@ app.UseEndpoints(e => {
 
     //e.MapHub<ChatHub>("/chathub");
 
-    e.MapBlazorHub();
+    //e.MapBlazorHub();
 });
 
 

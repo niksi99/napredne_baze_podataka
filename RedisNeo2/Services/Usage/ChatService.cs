@@ -26,35 +26,23 @@ namespace RedisNeo2.Services.Usage
 
             var roomKey = "room:1";
 
-            Message m = new Message();
-
-            m.Id = messageId;
-            m.UserName = user;
-            m.VremeSlanja = DateTime.Now;
-            m.MessageText = message;
-
-    
-            await _redisDb.SortedSetAddAsync(roomKey, JsonSerializer.Serialize<Message>(m), DateTime.Now.ToOADate());
-            await PublishMessage(m);
+            //var jsonMessage = JsonSerializer.Serialize<Message>(message);
+            var A = new { 
+                messageId,
+                roomKey,
+                user,
+                message
+            };
+            await _redisDb.SortedSetAddAsync(roomKey, JsonSerializer.Serialize(A), DateTime.Now.ToOADate());
+            await PublishMessage(message);
         }
 
-        public async Task GetMessage() {
-            var sortedSetData = _redisDb.SortedSetScan("room:1");
-            
+        public string  GetMessage() {
+            var sortedSetData = _redisDb.SortedSetScan("Room:1");
             var vrati = (string.Join("\n", sortedSetData));
 
-            //return vrati;
-
-            Message[] niz = new Message[5];
-            Message m = new Message();
-            niz[0] = m;
-
-            m.Id = "xx";
-            m.UserName = "yy";
-            m.VremeSlanja = DateTime.Now;
-            m.MessageText = "zzz";
-
-            await PublishMessages(niz);
+            Console.WriteLine(vrati);
+            return vrati;
         }
         //private async Task PublishMessage(string type, Message data)
         //{
@@ -69,50 +57,14 @@ namespace RedisNeo2.Services.Usage
         //    await PublishMessage(pubSubMessage.ToString();
         //}
 
-        private async Task PublishMessage(Message pubSubMessage)
+        private async Task PublishMessage(string pubSubMessage)
         {
-            await _redisDb.PublishAsync("MESSAGES", JsonSerializer.Serialize<Message>(pubSubMessage));
+            await _redisDb.PublishAsync("MESSAGES", pubSubMessage);
         }
 
-        private async Task PublishMessages(Message[] pubSubMessage)
+        private async Task SubsMessage(string pubSubMessage)
         {
-            await _redisDb.PublishAsync("MESSAGES", JsonSerializer.Serialize<Message[]>(pubSubMessage));
-        }
-
-        public IEnumerable<Message> GetAll()
-        {
-            //var dogadjaji = this.client.Cypher
-            //                .Match("(x: Dogadjaj)")
-            //                .Return(x => x.As<Dogadjaj>())
-            //                .ResultsAsync;
-
-            var sortedSetData = _redisDb.SortedSetScan("room:1");
-
-            var vrati = (string.Join("\n", sortedSetData));
-            string[] poruke_splitovane = vrati.Split("/n");
-            Message[] p = new Message[10000];
-            foreach (var i in poruke_splitovane) {
-                string[] P = i.Split(" ");
-            }
-            List<Message> niz = new List<Message>();
-            Message m0 = new Message();
-            Message m1 = new Message();
-            
-
-            m0.Id = "xx";
-            m0.UserName = "yy";
-            m0.VremeSlanja = DateTime.Now;
-            m0.MessageText = "zzz";
-
-            m1.Id = "fwef";
-            m1.UserName = "Mikiii";
-            m1.VremeSlanja = DateTime.Now;
-            m1.MessageText = "AAAAA";
-            niz.Add(m0);
-            niz.Add(m1);
-
-            IEnumerable<Message> A = niz;
-            return A;
+           //await _redisD ("MESSAGES", pubSubMessage);
         }
     }
 }

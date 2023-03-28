@@ -10,5 +10,6 @@ namespace RedisNeo2.Services.Implementation
        
         public bool Delete(string Naziv);
         public Dogadjaj FindByName();
+        public  bool PrijaviSe(string dog, string NGOName, string KorisnikEmail);
     }
 }

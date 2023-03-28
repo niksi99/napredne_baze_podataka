@@ -53,11 +53,11 @@ namespace RedisNeo2.Controllers
 
             var properties = new AuthenticationProperties();
 
-            HttpContext.SignInAsync(
-                CookieAuthenticationDefaults.AuthenticationScheme,
-                principalcl,
-                properties
-            ).Wait();
+            await HttpContext.SignInAsync(
+                 CookieAuthenticationDefaults.AuthenticationScheme,
+                 principalcl,
+                 properties
+             );
 
             return RedirectToAction("LoggedInNGO", "NGO");
         }
@@ -87,6 +87,8 @@ namespace RedisNeo2.Controllers
             var sveOrganizacije = this.service.GetAll();
             return View(sveOrganizacije);
         }
+
+     
 
         [Authorize]
         public IActionResult LoggedInNGO()

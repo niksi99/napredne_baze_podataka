@@ -5,5 +5,6 @@ namespace RedisNeo2.Services.Implementation
     public interface IKorisnikService
     {
         public bool AddKorisnik(Korisnik noviKorisnik);
-    }
+        
+    } 
 }

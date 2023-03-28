@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.SignalR;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
 using RedisNeo2.Services.Usage;
+using StackExchange.Redis;
 using System.Security.Claims;
 using System.Text.Json;
 
@@ -14,30 +15,57 @@ namespace RedisNeo2.Hubs
         private readonly IKorisnikService _korService;
         private readonly IChatServices _chatService;
 
-        public ChatHub(INGOService ngoService, IKorisnikService k, IChatServices chatService)
+        //private readonly ILogger<Consumer> logger;
+        private readonly IConnectionMultiplexer _cmux;
+      //  private readonly IDatabase _redisDb;
+
+        private readonly  string Chanell = "NBP";
+        public ChatHub(IConnectionMultiplexer cmux, INGOService ngoService, IKorisnikService k, IChatServices chatService)
         {
             _ngoService = ngoService;
             _chatService = chatService;
             _korService = k;
+            _cmux = cmux;
+           // _redisDb = redisDb;
         }
 
-        public async Task SendMessage(string user, string messageString)
+        public async Task Pub(string user, string messageString) {
+
+            var subscriber =  _cmux.GetSubscriber();
+            string A = string.Concat(user, "^");
+            string B  = string.Concat(A, messageString);
+            
+            await subscriber.PublishAsync(Chanell, B);
+         
+
+        }
+
+        public async Task Sub() {
+            var subscriber = _cmux.GetSubscriber();
+            List<string> listaPoruka = new List<string>();
+            await subscriber.SubscribeAsync(Chanell, (channel, message) => {
+                //listaPoruka.Add(message);
+                Console.WriteLine("Pruka sa teksotm: " + message);
+            });
+            Console.ReadLine();
+
+            
+        }
+
+        public async Task SendMessageNovo(string user, string messageString)
         {
             //var message = JsonSerializer.Deserialize<Message>(messageString);
 
-            if (messageString != null)
-            {
-                await _chatService.SendMessage(user, messageString);
-            }
+            await Clients.All.SendAsync("NBP_Chat", user, messageString);
         }
 
-        public async Task GetMessage() {
-            await _chatService.GetMessage();    
-        }
+        //public async Task GetMessage1() {
+        //    //await _chatService.GetMessage();    
+        //}
 
-        public async Task SendMessage1(string user, string message) {
-            await Clients.All.SendAsync("aaaa", user, message);
-        }
+        //public async Task SendMessage1(string user, string message) {
+        //    await Clients.All.SendAsync("NBP_Chat", user, message);
+        //}
 
         //public async Task JoinRoom(RoomConnection rc) {
         //    await Groups.AddToGroupAsync(Context.ConnectionId, rc.Room);
@@ -48,6 +76,8 @@ namespace RedisNeo2.Hubs
         //    await Clients.All.SendAsync("chatapp", user, message);
 
         //public string GetConnectionID() => Context.ConnectionId;
+
+        public string korisnik() => Context.User.FindFirstValue(ClaimTypes.Email);
 
         public string re() => Context.User.FindFirstValue(ClaimTypes.Email);
 

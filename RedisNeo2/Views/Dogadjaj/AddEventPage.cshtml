@@ -44,6 +44,11 @@
                     <input type="textarea" class="form-control" asp-for="Lokacija" />
                     <span asp-validation-for="Lokacija" class="text-danger"></span>
                 </div>
+                <div class="form-group">
+                    <label asp-for="Organizator">Organizator</label>
+                    <input type="textarea" class="form-control" asp-for="Organizator"/>
+                    <span asp-validation-for="Lokacija" class="text-danger"></span>
+                </div>
 
                 @if (TempData["msg"] != null)
                 {
