@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.SignalR;
+using RedisNeo2.Models.DTOs;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
 using RedisNeo2.Services.Usage;
@@ -40,16 +41,25 @@ namespace RedisNeo2.Hubs
 
         }
 
-        public async Task Sub() {
+        public async Task<PorukaDTO> Sub() {
             var subscriber = _cmux.GetSubscriber();
+            string korisnik = string.Empty;
+            string poruka = string.Empty;
             List<string> listaPoruka = new List<string>();
-            await subscriber.SubscribeAsync(Chanell, (channel, message) => {
+            await subscriber.SubscribeAsync(Chanell, (channel, porukaPLUScovek) => {
                 //listaPoruka.Add(message);
-                Console.WriteLine("Pruka sa teksotm: " + message);
+                string[] subs = porukaPLUScovek.ToString().Split("^");
+                korisnik = subs[0];
+                poruka = subs[1];
+                Console.WriteLine("Poruku sa teksotm: " + poruka + " salje korisnik: " + korisnik);
             });
             Console.ReadLine();
 
-            
+            PorukaDTO vratiPoruku = new PorukaDTO();
+            vratiPoruku.korisnik = korisnik;
+            vratiPoruku.poruka = poruka;
+
+            return vratiPoruku;
         }
 
         public async Task SendMessageNovo(string user, string messageString)

@@ -8,177 +8,177 @@ build_property.PlatformNeutralAssembly =
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RedisNeo2
 build_property.RootNamespace = RedisNeo2
-build_property.ProjectDir = C:\Users\Nixy\Desktop\Licno\DOTNET\RedisNeo\RedisNeo2_sol\RedisNeo2\
+build_property.ProjectDir = C:\Users\Nixy\Desktop\RedisProjekat\RedisNeo2\
 build_property.RazorLangVersion = 6.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = C:\Users\Nixy\Desktop\Licno\DOTNET\RedisNeo\RedisNeo2_sol\RedisNeo2
+build_property.MSBuildProjectDirectory = C:\Users\Nixy\Desktop\RedisProjekat\RedisNeo2
 build_property._RazorSourceGeneratorDebug = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Pages/ChatCCC.razor]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Pages/ChatCCC.razor]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdENDQy5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Pages/ChatIndex.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Pages/ChatIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = UGFnZXNcQ2hhdEluZGV4LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Auth/Index1.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Auth/Index1.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxJbmRleDEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Auth/ObjaviDogadjajPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Auth/ObjaviDogadjajPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxPYmphdmlEb2dhZGphalBhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Auth/Register.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Auth/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Auth/RegisterKorisnikPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Auth/RegisterKorisnikPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3RlcktvcmlzbmlrUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Auth/RegisterNGOPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Auth/RegisterNGOPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQXV0aFxSZWdpc3Rlck5HT1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Chat/ChatIndex.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/ChatIndex.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0SW5kZXguY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Chat/ChatLobby.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/ChatLobby.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0TG9iYnkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Chat/ChatPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/ChatPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0UGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Chat/ChatVjuKorisnik.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/ChatVjuKorisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0Vmp1S29yaXNuaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Chat/ChatVjuNGO.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/ChatVjuNGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0Vmp1TkdPLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/AddEventPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/AddEventPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcQWRkRXZlbnRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/Dogadjaj.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Dogadjaj.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcRG9nYWRqYWouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/GetAll.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcR2V0QWxsLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/NeuspesnaPrijava.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/NeuspesnaPrijava.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcTmV1c3Blc25hUHJpamF2YS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/Prijavi.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Prijavi.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpamF2aS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/PrijaviSePage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/PrijaviSePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpamF2aVNlUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/Prijavljeni.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Prijavljeni.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpamF2bGplbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/Primljeni.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Primljeni.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpbWxqZW5pLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Dogadjaj/UspesnaPrijava.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/UspesnaPrijava.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcVXNwZXNuYVByaWphdmEuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Home/Index.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Home/Privacy.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Home/Privacy.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxQcml2YWN5LmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Home/Register.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Home/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Home/WelcomePage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Home/WelcomePage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxXZWxjb21lUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Korisnik/AddKorisnikPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/AddKorisnikPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcQWRkS29yaXNuaWtQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Korisnik/Korisnik.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/Korisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcS29yaXNuaWsuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Korisnik/LoggedInKorisnik.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/LoggedInKorisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcTG9nZ2VkSW5Lb3Jpc25pay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Login/LoginKorisnik.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Login/LoginKorisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5Lb3Jpc25pay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Login/LoginNGO.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Login/LoginNGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5OR08uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Login/LoginPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Login/LoginPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5QYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/NGO/AddNGOPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/AddNGOPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXEFkZE5HT1BhZ2UuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/NGO/GetAll.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/GetAll.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXEdldEFsbC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/NGO/LoggedInNGO.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/LoggedInNGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXExvZ2dlZEluTkdPLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/NGO/LoginNGOPage.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/LoginNGOPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXExvZ2luTkdPUGFnZS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/NGO/NGO.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/NGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXE5HTy5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/PreHome/Register.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/PreHome/Register.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcUHJlSG9tZVxSZWdpc3Rlci5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Shared/Error.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Shared/Error.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXEVycm9yLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Shared/_ValidationScriptsPartial.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Shared/_ValidationScriptsPartial.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9WYWxpZGF0aW9uU2NyaXB0c1BhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/_ViewImports.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/_ViewImports.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdJbXBvcnRzLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/_ViewStart.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/_ViewStart.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/Licno/DOTNET/RedisNeo/RedisNeo2_sol/RedisNeo2/Views/Shared/_Layout.cshtml]
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Shared/_Layout.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcU2hhcmVkXF9MYXlvdXQuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = b-7ox5ivoitb

@@ -1,70 +1,56 @@
 ﻿
 using Microsoft.AspNetCore.Mvc;
 using RedisNeo2.Hubs;
+using RedisNeo2.Models.DTOs;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
 using StackExchange.Redis;
+using System.Security.Claims;
 using System.Text.Json;
 
 namespace RedisNeo2.Services.Usage
 {
     public class ChatService : IChatServices
     {
-        private readonly IConnectionMultiplexer _redis;
-        private readonly IDatabase _redisDb;
-
-        public ChatService(IConnectionMultiplexer redis)
+        private readonly IConnectionMultiplexer _cmux;
+        private readonly IHttpContextAccessor httpContextAccessor;
+        //private readonly IDatabase _redisDb;
+        private readonly string Channel = "Kanal";
+        public ChatService(IConnectionMultiplexer cmux, IHttpContextAccessor httpContextAccessor)
         {
-            _redis = redis;
-            _redisDb = redis.GetDatabase();
+            _cmux = cmux;
+            this.httpContextAccessor = httpContextAccessor;
+            //_redisDb = redis.GetDatabase();
         }
 
-        public async Task SendMessage(string user, string message)
+        public string GetMessage()
         {
-            var messageId = Guid.NewGuid().ToString();
-            //message.Id = messageId;
-
-            var roomKey = "room:1";
-
-            //var jsonMessage = JsonSerializer.Serialize<Message>(message);
-            var A = new { 
-                messageId,
-                roomKey,
-                user,
-                message
-            };
-            await _redisDb.SortedSetAddAsync(roomKey, JsonSerializer.Serialize(A), DateTime.Now.ToOADate());
-            await PublishMessage(message);
+            throw new NotImplementedException();
         }
 
-        public string  GetMessage() {
-            var sortedSetData = _redisDb.SortedSetScan("Room:1");
-            var vrati = (string.Join("\n", sortedSetData));
-
-            Console.WriteLine(vrati);
-            return vrati;
-        }
-        //private async Task PublishMessage(string type, Message data)
-        //{
-        //    var jsonData = JsonSerializer.Serialize<Message>(data);
-
-        //    var pubSubMessage = new PubSub()
-        //    {
-        //        Type = type,
-        //        Data = jsonData
-        //    };
-
-        //    await PublishMessage(pubSubMessage.ToString();
-        //}
-
-        private async Task PublishMessage(string pubSubMessage)
+        public async Task SendMessage(string message)
         {
-            await _redisDb.PublishAsync("MESSAGES", pubSubMessage);
+            var user = httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email);
+            var subscriber = _cmux.GetSubscriber();
+            string A = string.Concat(user, "^");
+            string B = string.Concat(A, message);
+
+            await subscriber.PublishAsync(Channel, B);
         }
 
-        private async Task SubsMessage(string pubSubMessage)
-        {
-           //await _redisD ("MESSAGES", pubSubMessage);
+        public PorukaDTO Receive() {
+
+            PorukaDTO vratiPoruku = new PorukaDTO();
+
+            var subscriber = _cmux.GetSubscriber();
+     
+            subscriber.SubscribeAsync(Channel, (channel, porukaPLUScovek) => {
+                string[] subs = porukaPLUScovek.ToString().Split("^");
+                vratiPoruku.korisnik = subs[0];
+                vratiPoruku.poruka = subs[1];
+            });
+            Task.Delay(1000);
+            return vratiPoruku;
         }
     }
 }

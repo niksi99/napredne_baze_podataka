@@ -1,4 +1,6 @@
-﻿@*
+﻿@model RedisNeo2.Models.DTOs.PorukaDTO
+
+@*
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
@@ -36,5 +38,24 @@
             </div>
         </div>
     </div>
+    <form asp-action="Send" method="post">
+         <div class="form-group">
+                <label asp-for="poruka">Poruka</label>
+                <input type="text" class="form-control" asp-for="poruka" />
+                <span asp-validation-for="poruka" class="text-danger"></span>
+         </div>
+        <input type="submit" id="salji" value="Chat" />
+    </form>
+    <hr/>
+    <form method="get" asp-controller="Chat" asp-action="Receive">
+        <input type="submit" id="primi" value="Chat" />
+         <div class="form-group">
+             <label asp-for="korisnik">Salje</label>
+                <p id="porukaid" class="form-control" asp-for="korisnik" > </p>
+                <label asp-for="poruka">Poruka</label>
+                <p id="porukaid" class="form-control" asp-for="poruka" > </p>
+         </div>
+        
+    </form>
 <script src="~/js/signalr/dist/browser/signalr.js"></script>
 <script src="~/js/chatK.js"></script>

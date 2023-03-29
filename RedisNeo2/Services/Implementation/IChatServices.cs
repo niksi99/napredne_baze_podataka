@@ -1,10 +1,11 @@
-﻿using RedisNeo2.Models.Entities;
+﻿using RedisNeo2.Models.DTOs;
+using RedisNeo2.Models.Entities;
 
 namespace RedisNeo2.Services.Implementation
 {
     public interface IChatServices
     {
-        public Task SendMessage(string user, string message);
-        public string GetMessage();
+        public Task SendMessage(string message);
+        public PorukaDTO Receive();
     }
 }
