@@ -44,12 +44,12 @@ namespace RedisNeo2.Services.Usage
 
             var subscriber = _cmux.GetSubscriber();
      
-            subscriber.SubscribeAsync(Channel, (channel, porukaPLUScovek) => {
+            await subscriber.SubscribeAsync(Channel, (channel, porukaPLUScovek) => {
                 string[] subs = porukaPLUScovek.ToString().Split("^");
                 vratiPoruku.korisnik = subs[0];
                 vratiPoruku.poruka = subs[1];
             });
-            Task.Delay(1000);
+          
             return vratiPoruku;
         }
     }
