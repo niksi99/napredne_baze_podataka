@@ -63,6 +63,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxDaGF0Vmp1TkdPLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Chat/Receive.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcQ2hhdFxSZWNlaXZlLmNzaHRtbA==
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/AddEventPage.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcQWRkRXZlbnRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
@@ -125,6 +129,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/LoggedInKorisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcTG9nZ2VkSW5Lb3Jpc25pay5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/SviPrijavljeni.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcU3ZpUHJpamF2bGplbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Login/LoginKorisnik.cshtml]

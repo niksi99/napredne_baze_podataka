@@ -6,6 +6,6 @@ namespace RedisNeo2.Services.Implementation
     public interface IChatServices
     {
         public Task SendMessage(string message);
-        public Task<PorukaDTO> Receive();
+        public Task<string> Receive();
     }
 }

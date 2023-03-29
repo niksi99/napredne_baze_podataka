@@ -1,5 +1,6 @@
-﻿
-@model IEnumerable<RedisNeo2.Models.Entities.Dogadjaj>
+﻿@*
+@model IEnumerable<RedisNeo2.Models.Entities.Dogadjaj>*@
+    @model RedisNeo2.Models.Entities.Dogadjaj
 @{
     ViewData["Title"] = "Dogadjaj Page";
 }
@@ -9,5 +10,15 @@
     <p> <a href="/Dogadjaj/AddEventPage">Dodaj</a> </p>
     <p> <a href="/Dogadjaj/GetAll">Svi</a> </p>
     
+    
+    <form asp-action="Delete" method="post" asp-controller="Dogadjaj">
+        <input type="text" asp-for="Naziv"/>
+        <button type="submit">Obrisi</button>
+    </form>
+    
+    <form asp-action="SviPrijavljeni" method="get" asp-controller="Korisnik">
+        <input type="text" asp-for="Naziv"/>
+        <button type="submit"> PrikaziSvePrijavljene</button>
+    </form>
 </div>
 

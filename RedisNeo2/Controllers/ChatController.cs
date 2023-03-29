@@ -14,6 +14,7 @@ namespace RedisNeo2.Controllers
         public readonly IChatServices chatService;
 
         public ChatController(IChatServices chatService) {
+            
             this.chatService = chatService;
         }
 
@@ -25,8 +26,14 @@ namespace RedisNeo2.Controllers
             return View();
         }
 
+       
+
         [Authorize(Roles = "Korisnik")]
         public IActionResult ChatVjuKorisnik() {
+            //string D = this.chatService.Receive().ToString();
+            //string[] slice = D.Split("^");
+            //ViewBag.PORUKA = slice[1];
+            //ViewBag.KORISNIK = slice[0];
             return View();
         }
 
@@ -38,20 +45,24 @@ namespace RedisNeo2.Controllers
 
 
         [HttpPost]
-        public async Task<IActionResult> Send(string poruka) {
+        public async Task<NoContentResult> Send(string poruka) {
 
-            await this.chatService.SendMessage(poruka);
-
+            this.chatService.SendMessage(poruka);
             return NoContent();
+            
         }
 
         [HttpGet]
         public async Task<PorukaDTO> Receive() {
 
-            var D = await this.chatService.Receive();
-            ViewBag.Covek = D.korisnik;
-            ViewBag.Poruka = D.poruka;
-            return D;
+            string D = await this.chatService.Receive();
+            string[] slice = D.Split("^");
+            //ViewBag.PORUKA = D;
+            PorukaDTO PP = new PorukaDTO(); 
+            PP.poruka = slice[1];
+            PP.korisnik = slice[0];
+
+            return PP;
         }
 
     }

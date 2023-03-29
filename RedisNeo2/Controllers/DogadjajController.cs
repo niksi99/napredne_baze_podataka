@@ -86,6 +86,16 @@ namespace RedisNeo2.Controllers
            // return RedirectToAction("/Dogadjaj/GetAll");
         }
 
+        public async Task<IActionResult> Delete(Dogadjaj d1)
+        {
+            await this._client.Cypher.OptionalMatch("(d: Dogadjaj)<-[r]-()")
+                              .Where((Dogadjaj d) => d.Naziv == d1.Naziv)
+                              .Delete("r, d")
+                              .ExecuteWithoutResultsAsync();
+            //var result = this.dogadjaj_service.Delete(ime);
+            return RedirectToAction("GetAll");
+        }
+
         public IActionResult PrijaviSePage()
         {
             return View();
@@ -105,6 +115,8 @@ namespace RedisNeo2.Controllers
             var podaci = this.dogadjaj_service.GetAll();
             return View(podaci);
         }
+
+       
 
         public IActionResult AddEventPage()
         {

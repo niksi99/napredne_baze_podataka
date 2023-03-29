@@ -4,6 +4,8 @@
     For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
 *@
 @{
+    var p = ViewBag.PORUKA;
+    var k = ViewBag.KORISNIK;
 }
 
 <form method = "post" asp-controller="Korisnik" asp-action="Logout">
@@ -50,10 +52,9 @@
     <form method="get" asp-controller="Chat" asp-action="Receive">
         <input type="submit" id="primi" value="Chat" />
          <div class="form-group">
-             <label asp-for="korisnik">Salje</label>
-                <p id="porukaid" class="form-control" asp-for="korisnik" > </p>
-                <label asp-for="poruka">Poruka</label>
-                <p id="porukaid" class="form-control" asp-for="poruka" > </p>
+             <p>@p</p>
+             <p>@k</p>
+             <br />
          </div>
         
     </form>

@@ -30,9 +30,9 @@ connection.start().then(function () {
 document.getElementById("sendButtonKorisnik").addEventListener("click", function (event) {
     var user = document.getElementById("userKorisnik").innerHTML;
     var message = document.getElementById("messageInput").value;
-    connection.invoke("SendMessageNovo", user, message).catch(function (err) {
-        return console.error(err.toString());
-    });
+    //connection.invoke("SendMessageNovo", user, message).catch(function (err) {
+    //    return console.error(err.toString());
+    //});
     connection.invoke("Pub", user, message).catch(function (err) {
         return console.error(err.toString());
     });

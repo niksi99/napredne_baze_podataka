@@ -85,14 +85,9 @@ namespace RedisNeo2.Services.Usage
 
         public bool Delete(string Naziv)
         {
-            var trazeni = this.client.Cypher.Match("(d: Dogadjaj)")
-                                            .Where((Dogadjaj d) => d.Naziv == Naziv)
-                                            .Return(d => d.As<Dogadjaj>())
-                                            .ResultsAsync;
-            if (trazeni == null)
-                return false;
+            
 
-            this.client.Cypher.Match("(d: Dogadjaj)<-r-()")
+            this.client.Cypher.OptionalMatch("(d:Dogadjaj)<-[r]-()")
                               .Where((Dogadjaj d) => d.Naziv == Naziv)
                               .Delete("r, d")
                               .ExecuteWithoutResultsAsync();
@@ -112,6 +107,8 @@ namespace RedisNeo2.Services.Usage
             return dogadjaji.Result;
             
         }
+
+        
 
         public Dogadjaj FindByName()
         {
