@@ -108,7 +108,7 @@ namespace RedisNeo2.Controllers
             var b = await this._client.Cypher
                 .OptionalMatch("(korisnik:Korisnik)-[r:PrijavljenNa]->(dogadjaj:Dogadjaj)")
                 .Where((Korisnik korisnik, Dogadjaj dogadjaj) =>
-                korisnik.Email == p.EmailKorisnika &&
+                korisnik.Email == a &&
                 dogadjaj.Naziv == p.ImeDogadjaja)
                 .Return(korisnik => korisnik.As<Korisnik>())
                 .ResultsAsync;
