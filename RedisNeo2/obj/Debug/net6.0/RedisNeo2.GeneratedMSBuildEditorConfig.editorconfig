@@ -71,6 +71,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcQWRkRXZlbnRQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Brisanje.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcQnJpc2FuamUuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Dogadjaj.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcRG9nYWRqYWouY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
@@ -95,8 +99,12 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpamF2bGplbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
-[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/Primljeni.cshtml]
-build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcUHJpbWxqZW5pLmNzaHRtbA==
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/UredjeniDogadjaji.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcVXJlZGplbmlEb2dhZGphamkuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/UredjeniDogadjajiPage.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcRG9nYWRqYWpcVXJlZGplbmlEb2dhZGphamlQYWdlLmNzaHRtbA==
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Dogadjaj/UspesnaPrijava.cshtml]
@@ -135,6 +143,14 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcU3ZpUHJpamF2bGplbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/VecPostoji.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcVmVjUG9zdG9qaS5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/VecPostojiK.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcVmVjUG9zdG9qaUsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Login/LoginKorisnik.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTG9naW5cTG9naW5Lb3Jpc25pay5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -165,6 +181,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/NGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXE5HTy5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/PostojiNGO.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXFBvc3RvamlOR08uY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/PreHome/Register.cshtml]

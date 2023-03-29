@@ -88,7 +88,9 @@ namespace RedisNeo2.Controllers
             return View(sveOrganizacije);
         }
 
-     
+        public IActionResult PostojiNGO() {
+            return View();
+        }
 
         [Authorize]
         public IActionResult LoggedInNGO()

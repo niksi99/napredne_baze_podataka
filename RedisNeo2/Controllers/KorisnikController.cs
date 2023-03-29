@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 using Neo4jClient;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
+using StackExchange.Redis;
 using System.Security.Claims;
 
 namespace RedisNeo2.Controllers
@@ -12,8 +13,10 @@ namespace RedisNeo2.Controllers
     {
         private readonly IKorisnikService korisnikService;
         private readonly IGraphClient _client;
-        public KorisnikController(IKorisnikService korisnikService, IGraphClient _client) {
+        private readonly IConnectionMultiplexer _redis;
+        public KorisnikController(IConnectionMultiplexer _redis, IKorisnikService korisnikService, IGraphClient _client) {
             this.korisnikService = korisnikService;
+            this._redis = _redis;
             this._client = _client;
         }
 
@@ -59,6 +62,11 @@ namespace RedisNeo2.Controllers
         }
 
         public IActionResult LoginKorisnik()
+        {
+            return View();
+        }
+
+        public IActionResult Postoji()
         {
             return View();
         }

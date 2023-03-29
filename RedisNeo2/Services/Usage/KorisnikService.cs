@@ -15,8 +15,8 @@ namespace RedisNeo2.Services.Usage
         public bool AddKorisnik(Korisnik noviKorisnik)
         {
             this.client.Cypher.Create("(k:Korisnik $noviKorisnik)")
-                              .WithParam("noviKorisnik", noviKorisnik)
-                              .ExecuteWithoutResultsAsync(); ;
+                                 .WithParam("noviKorisnik", noviKorisnik)
+                                 .ExecuteWithoutResultsAsync(); ;
 
             return true;
         }
