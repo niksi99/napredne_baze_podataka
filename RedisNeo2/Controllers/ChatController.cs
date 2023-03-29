@@ -46,9 +46,9 @@ namespace RedisNeo2.Controllers
         }
 
         [HttpGet]
-        public PorukaDTO Receive() {
+        public async Task<PorukaDTO> Receive() {
 
-            var D = this.chatService.Receive();
+            var D = await this.chatService.Receive();
             ViewBag.Covek = D.korisnik;
             ViewBag.Poruka = D.poruka;
             return D;

@@ -38,7 +38,7 @@ namespace RedisNeo2.Services.Usage
             await subscriber.PublishAsync(Channel, B);
         }
 
-        public PorukaDTO Receive() {
+        public async Task<PorukaDTO> Receive() {
 
             PorukaDTO vratiPoruku = new PorukaDTO();
 
