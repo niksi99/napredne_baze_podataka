@@ -4,6 +4,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Neo4jClient;
 using RedisNeo2.Models;
+using RedisNeo2.Models.DTOs;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
 using System.Security.Claims;
@@ -15,10 +16,12 @@ namespace RedisNeo2.Controllers
     {
         private readonly ILogger<NGOController> _logger;
         private readonly INGOService service;
+        private readonly IHttpContextAccessor httpContextAccessor;
         private readonly IGraphClient client;
 
-        public NGOController(INGOService service, IGraphClient client, ILogger<NGOController> logger)
+        public NGOController(INGOService service, IGraphClient client, ILogger<NGOController> logger, IHttpContextAccessor httpContextAccessor)
         {
+            this.httpContextAccessor = httpContextAccessor;
             this.service = service;
             this.client = client;
             _logger = logger;
@@ -95,6 +98,35 @@ namespace RedisNeo2.Controllers
         [Authorize]
         public IActionResult LoggedInNGO()
         {
+            return View();
+        }
+
+        [HttpPost]
+        [Authorize(Roles = "NGO")]
+        public async Task<IActionResult> UpdateN(UpdateKorisnikNgoDTO k)
+        {
+            var a = this.httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email);
+
+            var result = await client.Cypher.Match("(nn:NGO)")
+                                            .Where((NGO nn) => nn.Email == a)
+                                            .Return(nn => nn.As<NGO>()).ResultsAsync;
+
+            NGO staraNgo = result.First();
+            staraNgo.Lozinka = k.NovaLozinka;
+
+            await this.client.Cypher
+            .Match("(n1:NGO)")
+            .Where((NGO n1) => n1.Email == a)
+            .Set("n1 = $ngoo")
+            .WithParam("ngoo", staraNgo)
+            .ExecuteWithoutResultsAsync();
+
+            return NoContent();
+        }
+
+        public IActionResult UpdateNgo()
+        {
+
             return View();
         }
 

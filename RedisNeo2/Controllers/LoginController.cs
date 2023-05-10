@@ -35,7 +35,8 @@ namespace RedisNeo2.Controllers
                 var k = await this.client.Cypher
               .Match("(korisnik:Korisnik)")
               .Where((Korisnik korisnik) =>
-               korisnik.Email == login.Email)
+               korisnik.Email == login.Email &&
+               korisnik.Lozinka == login.Lozinka)
               .Return(korisnik => korisnik.As<Korisnik>())
               .ResultsAsync;
 
@@ -50,7 +51,8 @@ namespace RedisNeo2.Controllers
                 var n = await this.client.Cypher
                    .Match("(ngo:NGO)")
                    .Where((NGO ngo) =>
-                    ngo.Email == login.Email)
+                    ngo.Email == login.Email &&
+                    ngo.Lozinka == login.Lozinka)
                    .Return(ngo => ngo.As<Korisnik>())
                    .ResultsAsync;
 

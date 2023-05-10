@@ -143,6 +143,10 @@ build_metadata.AdditionalFiles.CssScope =
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcU3ZpUHJpamF2bGplbmkuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/UpdateKorisnik.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcVXBkYXRlS29yaXNuaWsuY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/Korisnik/VecPostoji.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcS29yaXNuaWtcVmVjUG9zdG9qaS5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
@@ -185,6 +189,10 @@ build_metadata.AdditionalFiles.CssScope =
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/PostojiNGO.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXFBvc3RvamlOR08uY3NodG1s
+build_metadata.AdditionalFiles.CssScope = 
+
+[C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/NGO/UpdateNgo.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcTkdPXFVwZGF0ZU5nby5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
 [C:/Users/Nixy/Desktop/RedisProjekat/RedisNeo2/Views/PreHome/Register.cshtml]

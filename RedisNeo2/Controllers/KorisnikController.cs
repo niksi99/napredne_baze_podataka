@@ -1,7 +1,9 @@
 ﻿using Microsoft.AspNetCore.Authentication;
 using Microsoft.AspNetCore.Authentication.Cookies;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Neo4jClient;
+using RedisNeo2.Models.DTOs;
 using RedisNeo2.Models.Entities;
 using RedisNeo2.Services.Implementation;
 using StackExchange.Redis;
@@ -14,10 +16,12 @@ namespace RedisNeo2.Controllers
         private readonly IKorisnikService korisnikService;
         private readonly IGraphClient _client;
         private readonly IConnectionMultiplexer _redis;
-        public KorisnikController(IConnectionMultiplexer _redis, IKorisnikService korisnikService, IGraphClient _client) {
+        private readonly IHttpContextAccessor httpContextAccessor;
+        public KorisnikController(IHttpContextAccessor httpContextAccessor, IConnectionMultiplexer _redis, IKorisnikService korisnikService, IGraphClient _client) {
             this.korisnikService = korisnikService;
             this._redis = _redis;
             this._client = _client;
+            this.httpContextAccessor = httpContextAccessor;
         }
 
         public IActionResult Korisnik()
@@ -103,6 +107,31 @@ namespace RedisNeo2.Controllers
             //return View(b);
         }
 
-        
+        [HttpPost]
+        [Authorize(Roles="Korisnik")]
+        public async Task<IActionResult> UpdateKor(UpdateKorisnikNgoDTO k) {
+            var a = this.httpContextAccessor.HttpContext.User.FindFirstValue(ClaimTypes.Email);
+
+            var result = await _client.Cypher.Match("(kk:Korisnik)")
+                                            .Where((Korisnik kk) => kk.Email == a)
+                                            .Return(kk => kk.As<Korisnik>()).ResultsAsync;
+
+            Korisnik stariKor = result.First();
+            stariKor.Lozinka = k.NovaLozinka;
+
+            await this._client.Cypher
+            .Match("(k1:Korisnik)")
+            .Where((Korisnik k1) => k1.Email == a)
+            .Set("k1 = $korisnik")
+            .WithParam("korisnik", stariKor)
+            .ExecuteWithoutResultsAsync();
+
+            return NoContent();
+        }
+
+        public IActionResult UpdateKorisnik() {
+
+            return View();
+        }
     }
 }
